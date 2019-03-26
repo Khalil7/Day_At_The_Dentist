@@ -4,8 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: [{enabled: 1, path: Assets/dental/scenes/Start Menu.unity, guid: 66acd4f81f6a3439a9b8765e9cf9c8c9},
-    {enabled: 1, path: Assets/dental/scenes/Help Screen.unity, guid: 33c60ec00ea484453ba9cbe5b0529a93},
-    {enabled: 1, path: Assets/dental/scenes/dental.unity, guid: f095db1493b7d1c43b3ddccfbbaefc28},
-    {enabled: 1, path: Assets/dental/scenes/dental.unity, guid: f095db1493b7d1c43b3ddccfbbaefc28}]
+  m_Scenes:
+  - enabled: 0
+    path: Assets/dental/scenes/Start Menu.unity
+    guid: 66acd4f81f6a3439a9b8765e9cf9c8c9
+  - enabled: 0
+    path: Assets/dental/scenes/Help Screen.unity
+    guid: 33c60ec00ea484453ba9cbe5b0529a93
+  - enabled: 1
+    path: Assets/dental/scenes/dental.unity
+    guid: f095db1493b7d1c43b3ddccfbbaefc28
+  - enabled: 0
+    path: Assets/dental/scenes/dental.unity
+    guid: f095db1493b7d1c43b3ddccfbbaefc28
   m_configObjects: {}

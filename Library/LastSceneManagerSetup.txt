@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/dental/scenes/Start Menu.unity
+- path: Assets/dental/scenes/dental.unity
   isLoaded: 1
   isActive: 1

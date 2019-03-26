@@ -120,6 +120,7 @@ namespace HoloToolkit.Unity.InputModule
                 }
             }
         }
+
         private void Update()
         {
 #if UNITY_WSA
@@ -354,13 +355,5 @@ namespace HoloToolkit.Unity.InputModule
 
             animationController.speed = isTeleportValid ? 1 : 0;
         }
-
-        public void LoadMarker()
-        {
-            teleportMarker = Resources.Load("TeleportMarker") as GameObject;
-            animationController = teleportMarker.GetComponent<Animator>();
-        }
     }
-
-
 }
