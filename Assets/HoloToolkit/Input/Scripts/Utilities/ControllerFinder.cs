@@ -128,10 +128,11 @@ namespace HoloToolkit.Unity.InputModule
 #if UNITY_WSA && UNITY_2017_2_OR_NEWER
             if (newController.Handedness == handedness && !newController.Equals(ControllerInfo))
             {
+                
                 Transform elementTransform;
                 if (!newController.TryGetElement(element, out elementTransform))
                 {
-                    Debug.LogError("Unable to find element of type " + element + " under controller " + newController.ControllerParent.name + "; not attaching.");
+                    Debug.Log("Unable to find element of type " + element + " under controller " + newController.ControllerParent.name + "; not attaching.");
                     return;
                 }
 

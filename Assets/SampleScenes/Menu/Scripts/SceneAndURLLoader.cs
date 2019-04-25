@@ -4,18 +4,18 @@ using UnityEngine.SceneManagement;
 
 public class SceneAndURLLoader : MonoBehaviour
 {
-    private PauseMenu m_PauseMenu;
+    private SamplePauseMenu m_PauseMenu;
 
 
     private void Awake ()
     {
-        m_PauseMenu = GetComponentInChildren <PauseMenu> ();
+        m_PauseMenu = GetComponentInChildren <SamplePauseMenu> ();
     }
 
 
     public void SceneLoad(string sceneName)
 	{
-		//PauseMenu pauseMenu = (PauseMenu)FindObjectOfType(typeof(PauseMenu));
+		//SamplePauseMenu pauseMenu = (SamplePauseMenu)FindObjectOfType(typeof(SamplePauseMenu));
 		m_PauseMenu.MenuOff ();
 		SceneManager.LoadScene(sceneName);
 	}

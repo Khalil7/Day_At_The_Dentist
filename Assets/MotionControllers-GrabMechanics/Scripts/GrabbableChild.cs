@@ -21,6 +21,7 @@ namespace HoloToolkit.Unity.InputModule.Examples.Grabbables
         public GameObject toolTaskScript;
         public Vector3 origPosition;
         public Quaternion origRotation;
+        public Animator animation;
 
         protected override void StartGrab(BaseGrabber grabber)
         {
@@ -36,9 +37,14 @@ namespace HoloToolkit.Unity.InputModule.Examples.Grabbables
             }
     
             base.StartGrab(grabber);
+            print(GrabberPrimary.transform);
             transform.SetParent(GrabberPrimary.transform);
             gameObject.GetComponent<Rigidbody>().isKinematic = true;
-            toolTaskScript.GetComponent<ToolTaskScript>().doTask(tool);
+            if (toolTaskScript != null)
+            {
+                toolTaskScript.GetComponent<ToolTaskScript>().doTask(tool);
+            }
+          
         }
 
         protected override void EndGrab()
@@ -54,6 +60,10 @@ namespace HoloToolkit.Unity.InputModule.Examples.Grabbables
             base.EndGrab();
             transform.position = origPosition;
             transform.rotation = origRotation;
+            if (animation != null)
+            {
+                animation.SetBool("thrown", true);
+            }
         }
 
         protected override void AttachToGrabber(BaseGrabber grabber)

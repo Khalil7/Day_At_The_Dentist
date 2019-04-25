@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{03B214BB-3C2A-A0D8-C608-14C8EDEBC6CC}</ProjectGuid>
+    <ProjectGuid>{CDC9B5C1-47F0-9933-27AB-D07D5AC67834}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,7 +60,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\3DTOYS\rotatecamera.cs" />
+    <Compile Include="Assets\animate_drill.cs" />
     <Compile Include="Assets\BaseTaskSystem.cs" />
+    <Compile Include="Assets\chairBoxUI.cs" />
+    <Compile Include="Assets\chairSit.cs" />
+    <Compile Include="Assets\chairTrigger.cs" />
     <Compile Include="Assets\Doors.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics.cs" />
@@ -71,6 +76,9 @@
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\enter.cs" />
     <Compile Include="Assets\enterDoor.cs" />
+    <Compile Include="Assets\firsttask.cs" />
+    <Compile Include="Assets\fly.cs" />
+    <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\Height.cs" />
     <Compile Include="Assets\HoloToolkit\Boundary\Scripts\BoundaryManager.cs" />
     <Compile Include="Assets\HoloToolkit\Boundary\Scripts\Edge.cs" />
@@ -586,6 +594,7 @@
     <Compile Include="Assets\HoloToolkit\UX\Scripts\UsabilityUtilities.cs" />
     <Compile Include="Assets\KeepScore.cs" />
     <Compile Include="Assets\load_controller.cs" />
+    <Compile Include="Assets\MaxP\Shaders\Scripts\DirtyLensFlare.cs" />
     <Compile Include="Assets\MotionControllers-GrabMechanics\Scripts\BaseGrabbable.cs" />
     <Compile Include="Assets\MotionControllers-GrabMechanics\Scripts\BaseGrabber.cs" />
     <Compile Include="Assets\MotionControllers-GrabMechanics\Scripts\BaseScalable.cs" />
@@ -610,10 +619,13 @@
     <Compile Include="Assets\MotionControllers-GrabMechanics\Scripts\ThrowableObject.cs" />
     <Compile Include="Assets\MotionControllers-GrabMechanics\Scripts\UsableObject.cs" />
     <Compile Include="Assets\MotionControllers-GrabMechanics\Scripts\UseStateEnum.cs" />
+    <Compile Include="Assets\MouthMiniGame.cs" />
+    <Compile Include="Assets\PauseMenu.cs" />
     <Compile Include="Assets\pickupobject.cs" />
     <Compile Include="Assets\PositionChanger.cs" />
+    <Compile Include="Assets\PositionStabilizer.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\SampleScenes\Menu\Scripts\SamplePauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
@@ -625,7 +637,10 @@
     <Compile Include="Assets\StopCameraRotation.cs" />
     <Compile Include="Assets\SyncPosition.cs" />
     <Compile Include="Assets\syncRotation.cs" />
+    <Compile Include="Assets\taskBoxUI.cs" />
+    <Compile Include="Assets\timerTwo.cs" />
     <Compile Include="Assets\ToolTaskScript.cs" />
+    <Compile Include="Assets\ToothbrushTutorialTask.cs" />
     <Compile Include="Assets\WalkReceptionTask.cs" />
     <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFConstant.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
@@ -637,11 +652,13 @@
     <None Include="Assets\HoloToolkit\UX\Shaders\unlit_vert_color.shader" />
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\VertexLitConfigurable.cginc" />
     <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFStandardInput.cginc" />
+    <None Include="Assets\3DTOYS\readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\FastConfigurable\FastConfigurable.cginc" />
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\FastConfigurable\FastConfigurable2Sided.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFVertexLitCommon.cginc" />
+    <None Include="Assets\MaxP\Shaders\_Source\Shaders\Resources\Blur.shader" />
     <None Include="Assets\DOTween\readme.txt" />
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\UnlitNoDepthTest.shader" />
     <None Include="Assets\HoloToolkit\UX\Fonts\LICENSE.txt" />
@@ -675,6 +692,7 @@
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\FastConfigurable\macro.cginc" />
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\FastConfigurable\HoloToolkitCommon.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\MaxP\Shaders\_Source\Shaders\Resources\DirtyLensFlare.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\HoloToolkit\UX\Shaders\Alpha-Diffuse.shader" />
     <None Include="Assets\PBR Ground Materials #1 [Dirt&amp; Grass]\Documentation.txt" />
@@ -700,25 +718,25 @@
     <None Include="Assets\HoloToolkit\UX\Shaders\3DTextShader.shader" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Unity Projects/A Day At The Dentist/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Unity Projects/Git_Dentist/Day_At_The_Dentist/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/Unity Projects/A Day At The Dentist/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/Unity Projects/Git_Dentist/Day_At_The_Dentist/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Unity Projects/A Day At The Dentist/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/Unity Projects/Git_Dentist/Day_At_The_Dentist/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.WindowsMR.Editor">
-      <HintPath>D:/Unity Projects/A Day At The Dentist/Library/ScriptAssemblies/Unity.XR.WindowsMR.Editor.dll</HintPath>
+      <HintPath>D:/Unity Projects/Git_Dentist/Day_At_The_Dentist/Library/ScriptAssemblies/Unity.XR.WindowsMR.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Unity Projects/A Day At The Dentist/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Unity Projects/Git_Dentist/Day_At_The_Dentist/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>D:/Unity Projects/A Day At The Dentist/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>D:/Unity Projects/Git_Dentist/Day_At_The_Dentist/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.WindowsMR">
-      <HintPath>D:/Unity Projects/A Day At The Dentist/Library/ScriptAssemblies/Unity.XR.WindowsMR.dll</HintPath>
+      <HintPath>D:/Unity Projects/Git_Dentist/Day_At_The_Dentist/Library/ScriptAssemblies/Unity.XR.WindowsMR.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/MetroSupport/Tools/UnityEngine.AIModule.dll</HintPath>
@@ -919,22 +937,22 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>D:/Unity Projects/A Day At The Dentist/Assets/DOTween/DOTween.dll</HintPath>
+      <HintPath>D:/Unity Projects/Git_Dentist/Day_At_The_Dentist/Assets/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="GLTFSerialization">
-      <HintPath>D:/Unity Projects/A Day At The Dentist/Assets/HoloToolkit/Utilities/Scripts/GLTF/Plugins/GLTFSerialization/GLTFSerialization.dll</HintPath>
+      <HintPath>D:/Unity Projects/Git_Dentist/Day_At_The_Dentist/Assets/HoloToolkit/Utilities/Scripts/GLTF/Plugins/GLTFSerialization/GLTFSerialization.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>D:/Unity Projects/A Day At The Dentist/Assets/HoloToolkit/Utilities/Scripts/GLTF/Plugins/JsonNet/Newtonsoft.Json.dll</HintPath>
+      <HintPath>D:/Unity Projects/Git_Dentist/Day_At_The_Dentist/Assets/HoloToolkit/Utilities/Scripts/GLTF/Plugins/JsonNet/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>D:/Unity Projects/A Day At The Dentist/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>D:/Unity Projects/Git_Dentist/Day_At_The_Dentist/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>D:/Unity Projects/A Day At The Dentist/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>D:/Unity Projects/Git_Dentist/Day_At_The_Dentist/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>D:/Unity Projects/A Day At The Dentist/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>D:/Unity Projects/Git_Dentist/Day_At_The_Dentist/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -1293,7 +1311,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{1826023E-5D31-ECA8-13C0-A2D53AC9F759}</Project>
+      <Project>{CB873581-65BA-1CB7-5427-43804D01F81E}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>

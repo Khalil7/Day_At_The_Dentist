@@ -6,6 +6,7 @@ using TMPro;
 public class KeepScore : MonoBehaviour
 {
     public static int totalScore;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,7 @@ public class KeepScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         gameObject.GetComponent<TextMeshProUGUI>().SetText("Score: " + totalScore.ToString());
     }
 }

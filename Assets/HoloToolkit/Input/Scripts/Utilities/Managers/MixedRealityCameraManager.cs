@@ -15,6 +15,7 @@ namespace HoloToolkit.Unity.InputModule
     /// Based on those values, you can customize your camera settings.
     /// It also fires an OnDisplayDetected event.
     /// </summary>
+  
     public class MixedRealityCameraManager : Singleton<MixedRealityCameraManager>
     {
         [Tooltip("The near clipping plane distance for an opaque display.")]
@@ -82,6 +83,22 @@ namespace HoloToolkit.Unity.InputModule
             {
                 OnDisplayDetected(CurrentDisplayType);
             }
+
+            print("csManager");
+            //float heighhtDiff;
+
+            //GameObject parent = GameObject.Find("MixedRealityCameraParent");
+            //float x;
+            //float y;
+            //float z;
+            //UnityEngine.XR.InputTracking.disablePositionalTracking = true;
+            //y = parent.transform.position.y;
+            //heighhtDiff = y - gameObject.transform.position.y;
+            //z = parent.transform.position.z;
+            //x = parent.transform.position.x;
+
+            //parent.transform.position = new Vector3(x, y + heighhtDiff, z);
+
         }
 
         public void ApplySettingsForOpaqueDisplay()

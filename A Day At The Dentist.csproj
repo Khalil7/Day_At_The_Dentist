@@ -654,6 +654,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\BaseTaskSystem.cs" />
+    <Compile Include="Assets\chairSit.cs" />
+    <Compile Include="Assets\chairTrigger.cs" />
     <Compile Include="Assets\Doors.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics.cs" />
@@ -664,6 +666,7 @@
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\enter.cs" />
     <Compile Include="Assets\enterDoor.cs" />
+    <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\Height.cs" />
     <Compile Include="Assets\HoloToolkit\Boundary\Scripts\BoundaryManager.cs" />
     <Compile Include="Assets\HoloToolkit\Boundary\Scripts\Edge.cs" />
@@ -1177,6 +1180,7 @@
     <Compile Include="Assets\HoloToolkit\UX\Scripts\UICollection.cs" />
     <Compile Include="Assets\HoloToolkit\UX\Scripts\UsabilityScaler.cs" />
     <Compile Include="Assets\HoloToolkit\UX\Scripts\UsabilityUtilities.cs" />
+    <Compile Include="Assets\KeepScore.cs" />
     <Compile Include="Assets\load_controller.cs" />
     <Compile Include="Assets\MotionControllers-GrabMechanics\Scripts\BaseGrabbable.cs" />
     <Compile Include="Assets\MotionControllers-GrabMechanics\Scripts\BaseGrabber.cs" />
@@ -1202,10 +1206,12 @@
     <Compile Include="Assets\MotionControllers-GrabMechanics\Scripts\ThrowableObject.cs" />
     <Compile Include="Assets\MotionControllers-GrabMechanics\Scripts\UsableObject.cs" />
     <Compile Include="Assets\MotionControllers-GrabMechanics\Scripts\UseStateEnum.cs" />
+    <Compile Include="Assets\PauseMenu.cs" />
     <Compile Include="Assets\pickupobject.cs" />
     <Compile Include="Assets\PositionChanger.cs" />
+    <Compile Include="Assets\PositionStabilizer.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\SampleScenes\Menu\Scripts\SamplePauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
@@ -1217,6 +1223,9 @@
     <Compile Include="Assets\StopCameraRotation.cs" />
     <Compile Include="Assets\SyncPosition.cs" />
     <Compile Include="Assets\syncRotation.cs" />
+    <Compile Include="Assets\taskBoxUI.cs" />
+    <Compile Include="Assets\ToolTaskScript.cs" />
+    <Compile Include="Assets\ToothbrushTutorialTask.cs" />
     <Compile Include="Assets\WalkReceptionTask.cs" />
   </ItemGroup>
   <ItemGroup>

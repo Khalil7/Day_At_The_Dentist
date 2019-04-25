@@ -45,6 +45,7 @@ namespace HoloToolkit.Unity.InputModule.Examples.Grabbables
 #if UNITY_WSA && UNITY_2017_2_OR_NEWER
         private void InteractionSourcePressed(InteractionSourcePressedEventArgs obj)
         {
+            print("controller");
             if (obj.pressType == pressType)
             {
                 GrabStart();
